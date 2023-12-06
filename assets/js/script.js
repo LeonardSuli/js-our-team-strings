@@ -19,4 +19,28 @@
 
 
 // Creare l’array di stringhe contenente i nomi dei membri del team.
-const team = ['Leo', 'Luca', 'Marco', 'Paolo', 'Fabio']
+const team = ['Leo', 'Luca', 'Marco', 'Paolo', 'Fabio'];
+console.log(team);
+
+const container = document.querySelector('.container');
+
+
+// Stampare le informazioni su DOM come card.
+for (let i = 0; i < team.length; i++) {
+
+    const element = team[i];
+
+    const div = document.createElement('div');
+
+    div.classList.add('card');
+
+    div.innerHTML = element;
+
+    container.append(div);
+
+    div.addEventListener('click', function(){
+        console.log('clicked');
+    })
+    
+}
+
